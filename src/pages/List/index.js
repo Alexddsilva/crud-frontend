@@ -9,12 +9,6 @@ const List = (props) => {
 
   let count = 0;
 
-  useEffect(() => {
-    fetch('http://localhost:8080/pessoas')
-      .then((res) => res.json())
-      .then((data) => setPessoas(data));
-  }, []);
-
   async function deletePessoa(id){
     await api.delete(`pessoas/${id}`);
     const findPessoa = pessoas.findIndex((pessoa) => pessoa.id === id);
@@ -27,7 +21,13 @@ const List = (props) => {
       window.location.href = `/edit/${id}`;
     }, 100);
   }
-  
+
+  useEffect(() => {
+    fetch('http://localhost:8080/pessoas')
+      .then((res) => res.json())
+      .then((data) => setPessoas(data));
+  }, []);
+
   function addNew() {
     setTimeout(() => {
       window.location.href = '/register';
