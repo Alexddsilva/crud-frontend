@@ -31,7 +31,7 @@ const Register = () => {
 
   async function handleCadastro(e){
     e.preventDefault();
-    const request = await api.post('/pessoas', pessoa)
+    await api.post('/pessoas', pessoa)
     .then(response => { 
       if(response.status === 200){
         back();
