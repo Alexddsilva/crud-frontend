@@ -100,6 +100,7 @@ const Edit = (props) => {
           <Form.Group controlId="formBasic">
             <Form.Label>Telefone</Form.Label>
             <Form.Control
+              id="telefone"
               defaultValue={telefone}
               type="text"
               onChange={(event) => setTelefone(event.target.value)}
@@ -122,6 +123,7 @@ const Edit = (props) => {
           <Form.Group controlId="formBasic">
             <Form.Label>CPF</Form.Label>
             <Form.Control
+              id="CPF"
               defaultValue={cpf}
               type="text"
               onChange={(event) => setCpf(event.target.value)}

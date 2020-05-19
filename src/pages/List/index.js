@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
 
-import { Title, Div } from './styles';
+import { Div } from './styles';
 
 const List = (props) => {
   const [pessoas, setPessoas] = useState([]);
@@ -57,9 +57,9 @@ const List = (props) => {
                 <td>{pessoa.nome}</td>
                 <td>{pessoa.sobrenome}</td>
                 <td>{pessoa.email}</td>
-                <td>{pessoa.telefone}</td>
+                <td id="telefone">{pessoa.telefone}</td>
                 <td>{pessoa.endereco}</td>
-                <td>{pessoa.cpf}</td>
+                <td id="CPF" >{pessoa.cpf}</td>
                 <td className="actions">
                   <button
                     onClick={() => deletePessoa(pessoa.id)}
