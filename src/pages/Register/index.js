@@ -90,6 +90,7 @@ const Register = () => {
             <Form.Group controlId="formBasic">
               <Form.Label>Telefone</Form.Label>
               <Form.Control
+                id="telefone"
                 type="text"
                 onChange={(event) => setTelefone(event.target.value)}
                 placeholder="Escreva seu telefone"
@@ -112,6 +113,7 @@ const Register = () => {
             <Form.Group controlId="formBasic">
               <Form.Label>CPF</Form.Label>
               <Form.Control
+                id="CPF"
                 type="text"
                 onChange={(event) => setCpf(event.target.value)}
                 placeholder="Escreva seu CPF"
